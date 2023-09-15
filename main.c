@@ -5,26 +5,26 @@
 
 int findIncompleteQuotient(int dividend, int divisor)
 {
-    bool is_negative = (dividend < 0) != (divisor < 0);
+    bool isNegative = (dividend < 0) != (divisor < 0);
 
     dividend = abs(dividend);
     divisor = abs(divisor);
 
-    int incomplete_quotient = 0;
+    int incompleteQuotient = 0;
     while (dividend >= divisor)
     {
         dividend -= divisor;
-        ++incomplete_quotient;
+        ++incompleteQuotient;
     }
-    if (is_negative)
+    if (isNegative)
     {
-        incomplete_quotient = -incomplete_quotient;
+        incompleteQuotient = -incompleteQuotient;
         if (dividend != 0)
         {
-            --incomplete_quotient;
+            --incompleteQuotient;
         }
     }
-    return incomplete_quotient;
+    return incompleteQuotient;
 }
 
 int main()
