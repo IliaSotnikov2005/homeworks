@@ -1,6 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "functions.h"
+
+int countZeros(int* array, int size)
+{
+    int zeroCounter = 0;
+    for (int i = 0; i < size; ++i)
+    {
+        if (array[i] == 0)
+        {
+            ++zeroCounter;
+        }
+    }
+    return zeroCounter;
+}
 
 int main()
 {
-    return 0;
+    printf("Enter the length of the array: ");
+    int arraySize = getNum();
+    int* arrayOfNumbers = malloc(arraySize * sizeof(int));
+
+    printf("\nEnter the array elements one by one:\n");
+    fillArray(arrayOfNumbers, arraySize);
+
+    int zeroCount = countZeros(arrayOfNumbers, arraySize);
+    free(arrayOfNumbers);
+    printf("\nThe number of zeros in the array: %d\n", zeroCount);
 }
