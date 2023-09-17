@@ -19,7 +19,7 @@ int main()
     int arraySize = getNum();
     while (arraySize < 0)
     {
-        printf("\nThe size of array should be greater than 0\nTry again: ");
+        printf("\nThe size of array should be greater than 0 or equal\nTry again: ");
         arraySize = getNum();
     }
     char** array = (char**)malloc(arraySize * sizeof(char*));
