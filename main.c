@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <time.h>
 
 int recursiveExponentiation(int number, int power)
 {
