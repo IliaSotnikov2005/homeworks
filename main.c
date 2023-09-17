@@ -19,6 +19,11 @@ int main()
 {
     printf("Enter the length of the array: ");
     int arraySize = getNum();
+    while (arraySize < 0)
+    {
+        printf("\nThe size of array should be greater than 0\nTry again: ");
+        arraySize = getNum();
+    }
     int* arrayOfNumbers = malloc(arraySize * sizeof(int));
 
     printf("\nEnter the array elements one by one:\n");
