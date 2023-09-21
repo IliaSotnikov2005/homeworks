@@ -9,9 +9,10 @@ int getNum(void)
     int number = 0;
     while (true)
     {
-        char symbol = '\0';
-        int input = scanf_s("%d%c", &number, &symbol);
-        if (input == 2 && symbol == '\n')
+        int input = scanf_s("%d", &number);
+        char symbol = 0;
+        int input2 = scanf_s("%c", &symbol);
+        if (input == 1 && input2 == 1 && symbol == '\n')
         {
             break;
         }
