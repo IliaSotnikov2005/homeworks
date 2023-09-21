@@ -28,6 +28,7 @@ int findIncompleteQuotient(int dividend, int divisor, int* exitCode)
         ++incompleteQuotient;
     }
 
+    exitCode = 0;
     return resultNegative ? -incompleteQuotient : incompleteQuotient;
 }
 
