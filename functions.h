@@ -56,3 +56,21 @@ void fillStringArray(char** array, int size)
         strcpy(array[i], value);
     }
 }
+
+void randomIntArrayFill(int* array, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        int value = rand();
+        array[i] = value;
+    }
+}
+
+void printIntArray(int* array, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+}
